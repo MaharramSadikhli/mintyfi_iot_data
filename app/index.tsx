@@ -1,15 +1,7 @@
-import { Colors } from "@/constants/Colors";
 import { useEffect, useState } from "react";
-import {
-  FlatList,
-  SafeAreaView,
-  Image,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { SafeAreaView } from "react-native";
 import { style } from "./index.style";
-import {Temprature, Drop} from "@/components/items.data";
+import Items from "@/components/items";
 
 type Movie = {
   id: string;
@@ -36,11 +28,7 @@ export default function Index() {
 
   return (
     <SafeAreaView style={style.container}>
-      <View style={style.rowContainer} >
-        <Temprature data={data} />
-        <Drop data={data} />
-      </View>
-
+      <Items data={data} />
     </SafeAreaView>
   );
 }
