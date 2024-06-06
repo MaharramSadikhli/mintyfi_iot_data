@@ -69,6 +69,8 @@ export default function Index() {
   return (
     <SafeAreaView style={style.container}>
       <Logo />
+      {/* <ItemsFirst data1={temperatureData}  data2={humidityData} data3={windData}/> */}
+      {/* <ItemsSecond data4={powerData} data5={peopleData} data6={connectionData}/> */}
       <ListItemsFirst data1={temperatureData}  data2={humidityData} data3={windData}/>
       <ListItemsSecond data4={powerData} data5={peopleData} data6={connectionData} />
     </SafeAreaView>

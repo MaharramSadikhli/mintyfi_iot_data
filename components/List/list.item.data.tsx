@@ -16,10 +16,7 @@ const ListTemprature = ({ data }: any) => {
   return (
     <View>
       <View style={style.listInnerContainer}>
-        <Image
-          style={style.img}
-          source={images["temp"]}
-        />
+        <Image style={style.img} source={images["temp"]} />
         <FlatList
           data={data}
           renderItem={({ item }) => (
@@ -38,10 +35,7 @@ const ListDrop = ({ data }: any) => {
   return (
     <View>
       <View style={style.listInnerContainer}>
-        <Image
-          style={style.img}
-          source={images["drop"]}
-        />
+        <Image style={style.img} source={images["drop"]} />
         <FlatList
           data={data}
           renderItem={({ item }) => (
@@ -57,97 +51,88 @@ const ListDrop = ({ data }: any) => {
 };
 
 const ListWind = ({ data }: any) => {
-    return (
-      <View>
-        <View style={style.listInnerContainer}>
-          <Image
-            style={style.img}
-            source={images["wind"]}
-          />
-          <FlatList
-            data={data}
-            renderItem={({ item }) => (
-              <View>
-                <Text style={style.data_text}>{item.windVal}</Text>
-              </View>
-            )}
-            keyExtractor={(item) => item.idWind}
-          />
-        </View>
+  return (
+    <View>
+      <View style={style.listInnerContainer}>
+        <Image style={style.img} source={images["wind"]} />
+        <FlatList
+          data={data}
+          renderItem={({ item }) => (
+            <View>
+              <Text style={style.data_text}>{item.windVal}</Text>
+            </View>
+          )}
+          keyExtractor={(item) => item.idWind}
+        />
       </View>
-    );
-  };
+    </View>
+  );
+};
 
-  const ListBulb = ({ data }: any) => {
-    return (
-      <View>
-        <View style={style.listInnerContainer}>
-          <Image
-            style={style.img}
-            source={images["bulb"]}
-          />
-          <FlatList
-            data={data}
-            renderItem={({ item }) => (
-              <View>
-                <Text style={style.data_text}>{item.powerVal}</Text>
-              </View>
-            )}
-            keyExtractor={(item) => item.idPower}
-          />
-        </View>
+const ListBulb = ({ data }: any) => {
+  return (
+    <View>
+      <View style={style.listInnerContainer}>
+        <Image style={style.img} source={images["bulb"]} />
+        <FlatList
+          data={data}
+          renderItem={({ item }) => (
+            <View>
+              <Text style={style.data_text}>{item.powerVal}</Text>
+            </View>
+          )}
+          keyExtractor={(item) => item.idPower}
+        />
       </View>
-    );
-  };
+    </View>
+  );
+};
 
-  const ListUsers = ({ data }: any) => {
-    return (
-      <View>
-        <View style={style.listInnerContainer}>
-          <Image
-            style={style.img}
-            source={images["users"]}
-          />
-          <FlatList
-            data={data}
-            renderItem={({ item }) => (
-              <View>
-                <Text style={style.data_text}>{item.peopleVal}</Text>
-              </View>
-            )}
-            keyExtractor={(item) => item.idPeople}
-          />
-        </View>
+const ListUsers = ({ data }: any) => {
+  return (
+    <View>
+      <View style={style.listInnerContainer}>
+        <Image style={style.img} source={images["users"]} />
+        <FlatList
+          data={data}
+          renderItem={({ item }) => (
+            <View>
+              <Text style={style.data_text}>{item.peopleVal}</Text>
+            </View>
+          )}
+          keyExtractor={(item) => item.idPeople}
+        />
       </View>
-    );
-  };
+    </View>
+  );
+};
 
+const ListWifi = ({ data }: any) => {
+  const connection = data[data.length - 1].statusCon;
+  console.log(connection);
+  return (
+    <View>
+      <View style={style.listInnerContainer}>
+        {connection == "true" ? (
+          <Image style={style.img} source={images["wifi"]} />
+        ) : (
+          <Image style={style.img} source={images["nowifi"]} />
+        )}
 
-  const ListWifi = ({ data }: any) => {
-    const connection = data
-    return (
-      <View>
-        <View style={style.listInnerContainer}>
-          <Image
-            style={style.img}
-            source={images["nowifi"]}
-          />
-          <FlatList
-            data={data}
-            renderItem={({ item }) => (
-              <View>
-                <Text style={style.data_text}>{item.statusCon}</Text>
-              </View>
-            )}
-            keyExtractor={(item) => item.idCon}
-          />
-        </View>
+        <FlatList
+          data={data}
+          renderItem={({ item }) => (
+            <View>
+              <Text style={style.data_text}>{item.statusCon}</Text>
+            </View>
+          )}
+          keyExtractor={(item) => item.idCon}
+        />
       </View>
-    );
-  };
+    </View>
+  );
+};
 
 export { ListTemprature, ListDrop, ListWind, ListBulb, ListUsers, ListWifi };
 
 const styles = StyleSheet.create({});
-
-
