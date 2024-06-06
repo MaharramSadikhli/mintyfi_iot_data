@@ -1,28 +1,26 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { ScrollView} from 'react-native'
 import React from 'react'
 import { style } from "@/app/index.style";
 import { Temprature, Drop, Wind, Bulb, Users, WiFi } from './items.data';
 
-const ItemsFirst = ({data}: any) => {
+const ItemsFirst = ({data1, data2, data3}: any) => {
   return (
     <ScrollView horizontal={true} contentContainerStyle={style.rowContainer} >
-        <Temprature data={data} />
-        <Drop data={data} />
-        <Wind data={data} />
+        <Temprature data={data1} />
+        <Drop data={data2} />
+        <Wind data={data3} />
       </ScrollView>
   )
 }
 
-const ItemsSecond = ({data}: any) => {
+const ItemsSecond = ({data4, data5, data6}: any) => {
   return (
     <ScrollView horizontal={true} contentContainerStyle={style.rowContainer} >
-        <Bulb data={data} />
-        <Users data={data} />
-        <WiFi data={data} />
+        <Bulb data={data4} />
+        <Users data={data5} />
+        <WiFi data={data6} />
       </ScrollView>
   )
 }
 
 export { ItemsFirst, ItemsSecond }
-
-const styles = StyleSheet.create({})

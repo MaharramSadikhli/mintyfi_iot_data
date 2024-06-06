@@ -3,35 +3,74 @@ import { SafeAreaView, Image } from "react-native";
 import { style } from "./index.style";
 import { ItemsFirst, ItemsSecond } from "@/components/items";
 import Logo from "@/components/logo";
+import { ListItemsFirst, ListItemsSecond } from "@/components/List/list.items";
 
-type Movie = {
-  id: string;
-  title: string;
-  image: string;
-};
+
+
+
+interface Temperature {
+  idTemp: string;
+  temp: string;
+}
+
+interface Humidity {
+  idHum: string;
+  hum: string;
+}
+
+interface Wind {
+  idWind: string;
+  windVal: string;
+}
+
+interface Power {
+  idPower: string;
+  powerVal: string;
+}
+
+interface People {
+  idPeople: string;
+  peopleVal: string;
+}
+
+interface Connection {
+  idCon: string;
+  statusCon: string;
+}
 
 export default function Index() {
-  const [data, setData] = useState<Movie[]>([]);
 
-  const getMovies = async () => {
+  const [temperatureData, setTemperatureData] = useState<Temperature[]>([]);
+  const [humidityData, setHumidityData] = useState<Humidity[]>([]);
+  const [windData, setWindData] = useState<Wind[]>([]);
+  const [powerData, setPowerData] = useState<Power[]>([]);
+  const [peopleData, setPeopleData] = useState<People[]>([]);
+  const [connectionData, setConnectionData] = useState<Connection[]>([]);
+
+  const getData = async () => {
     try {
-      const response = await fetch("https://reactnative.dev/movies.json");
+      const response = await fetch("https://raw.githubusercontent.com/MaharramSadikhli/APIs/main/iot_ap_newi.json");
       const json = await response.json();
-      setData(json.movies);
+      setTemperatureData(json[0].temprature);
+      setHumidityData(json[1].humidity);
+      setWindData(json[2].wind);
+      setPowerData(json[3].power);
+      setPeopleData(json[4].people);
+      setConnectionData(json[5].connection);
     } catch (error) {
       console.error(error);
     }
   };
 
   useEffect(() => {
-    getMovies();
+    getData();
   }, []);
 
   return (
     <SafeAreaView style={style.container}>
       <Logo />
-      <ItemsFirst data={data} />
-      <ItemsSecond data={data} />
+      <ListItemsFirst data1={temperatureData}  data2={humidityData} data3={windData}/>
+      <ListItemsSecond data4={powerData} data5={peopleData} data6={connectionData} />
     </SafeAreaView>
   );
 }
