@@ -2,8 +2,10 @@ import { Colors } from "@/constants/Colors"
 import { ViewStyle } from "react-native"
 
 export const InnerContainer: ViewStyle = {
-    flex: 2,
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: Colors.light.background
+    width: "100%",
+    padding: 20,
+    backgroundColor: Colors.dark.background
 }
