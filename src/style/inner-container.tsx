@@ -9,3 +9,12 @@ export const InnerContainer: ViewStyle = {
     padding: 20,
     backgroundColor: Colors.dark.background
 }
+
+export const ListInnerContainer: ViewStyle = {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    padding: 60,
+    backgroundColor: Colors.dark.background
+}
