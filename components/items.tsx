@@ -5,7 +5,7 @@ import { Temprature, Drop, Wind, Bulb, Users, WiFi } from './items.data';
 
 const Items = ({data}: any) => {
   return (
-    <ScrollView horizontal={true} style={style.rowContainer} >
+    <ScrollView horizontal={true} contentContainerStyle={style.rowContainer} >
         <Temprature data={data} />
         <Drop data={data} />
         <Wind data={data} />
