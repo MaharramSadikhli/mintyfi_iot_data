@@ -10,7 +10,7 @@ const item = ({ data, images, image }: any) => {
         data={data}
         renderItem={({ item }) => (
           <View>
-            <Text style={style.title}>{item.title}</Text>
+            <Text style={style.data_text}>{item.title}</Text>
           </View>
         )}
         keyExtractor={(item) => item.id}
