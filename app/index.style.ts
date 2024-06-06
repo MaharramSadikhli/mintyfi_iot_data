@@ -1,30 +1,13 @@
 import { Colors } from "@/constants/Colors";
 import { StyleSheet } from "react-native";
+import { Container, RowContainer, InnerContainer, DataText, DataImage, LogoContainer, LogoImage } from "@/src/style";
 
 export const style = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: Colors.light.background,
-  },
-  rowContainer: {
-    flexDirection: "row",
-  },
-  innerContainer: {
-    flex: 2,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: Colors.light.background
-  },
-  title: {
-    fontSize: 20,
-    color: Colors.light.text,
-    fontWeight: "bold",
-  },
-  img: {
-    width: 80,
-    height: 80,
-    resizeMode: "contain"
-  },
+  container: Container,
+  rowContainer: RowContainer,
+  innerContainer: InnerContainer,
+  data_text: DataText,
+  img: DataImage,
+  logo_container: LogoContainer,
+  logo_image: LogoImage
 });
