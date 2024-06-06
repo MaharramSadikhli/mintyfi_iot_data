@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { SafeAreaView } from "react-native";
+import { SafeAreaView, Image } from "react-native";
 import { style } from "./index.style";
-import Items from "@/components/items";
+import { ItemsFirst, ItemsSecond } from "@/components/items";
+import Logo from "@/components/logo";
 
 type Movie = {
   id: string;
@@ -28,7 +29,9 @@ export default function Index() {
 
   return (
     <SafeAreaView style={style.container}>
-      <Items data={data} />
+      <Logo />
+      <ItemsFirst data={data} />
+      <ItemsSecond data={data} />
     </SafeAreaView>
   );
 }
