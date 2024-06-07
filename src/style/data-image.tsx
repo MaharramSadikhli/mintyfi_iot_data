@@ -5,5 +5,6 @@ export const DataImage: ImageStyle = {
     width: 40,
     height: 40,
     resizeMode: "center",
-    marginBottom: 8
+    marginBottom: 10,
+    top: -20
 }

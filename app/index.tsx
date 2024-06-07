@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { SafeAreaView, Image } from "react-native";
 import { style } from "./index.style";
-import { ItemsFirst, ItemsSecond } from "@/components/items";
+import { ItemsFirst, ItemsSecond } from "@/components/items.parent.component";
 import Logo from "@/components/logo";
-import { ListItemsFirst, ListItemsSecond } from "@/components/List/list.items";
+import { ListItemsFirst, ListItemsSecond } from "@/components/List/list.items.parent.component";
 
 
 
@@ -69,10 +69,10 @@ export default function Index() {
   return (
     <SafeAreaView style={style.container}>
       <Logo />
-      {/* <ItemsFirst data1={temperatureData}  data2={humidityData} data3={windData}/> */}
-      {/* <ItemsSecond data4={powerData} data5={peopleData} data6={connectionData}/> */}
-      <ListItemsFirst data1={temperatureData}  data2={humidityData} data3={windData}/>
-      <ListItemsSecond data4={powerData} data5={peopleData} data6={connectionData} />
+      <ItemsFirst data1={temperatureData}  data2={humidityData} data3={windData}/>
+      <ItemsSecond data4={powerData} data5={peopleData} data6={connectionData}/>
+      {/* <ListItemsFirst data1={temperatureData}  data2={humidityData} data3={windData}/>
+      <ListItemsSecond data4={powerData} data5={peopleData} data6={connectionData} /> */}
     </SafeAreaView>
   );
 }
