@@ -1,7 +1,7 @@
 import { ScrollView} from 'react-native'
 import React from 'react'
 import { style } from "@/app/index.style";
-import { Temprature, Drop, Wind, Bulb, Users, WiFi } from './items.data';
+import { Temprature, Drop, Wind, Bulb, Users, WiFi } from './items.child.component';
 
 const ItemsFirst = ({data1, data2, data3}: any) => {
   return (

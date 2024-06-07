@@ -134,5 +134,3 @@ const ListWifi = ({ data }: any) => {
 };
 
 export { ListTemprature, ListDrop, ListWind, ListBulb, ListUsers, ListWifi };
-
-const styles = StyleSheet.create({});

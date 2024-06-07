@@ -1,7 +1,7 @@
 import { ScrollView} from 'react-native'
 import React from 'react'
 import { style } from "@/app/index.style";
-import { ListTemprature, ListDrop, ListWind, ListBulb, ListUsers, ListWifi } from './list.item.data';
+import { ListTemprature, ListDrop, ListWind, ListBulb, ListUsers, ListWifi } from './list.items.child.component';
 
 const ListItemsFirst = ({data1, data2, data3}: any) => {
   return (
