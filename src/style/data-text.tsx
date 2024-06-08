@@ -6,7 +6,7 @@ export const DataText: TextStyle = {
     fontSize: 15,
     color: Colors.dark.text,
     textAlign: "center",
-    // fontFamily: 'RedditMono-VariableFont_wght'
-    fontFamily: 'ArchitectsDaughter-Regular'
+    fontFamily: 'RedditMono-VariableFont_wght'
+    // fontFamily: 'ArchitectsDaughter-Regular'
     // fontFamily: 'Sofia-Regular'
 }

@@ -15,6 +15,6 @@ export const ListInnerContainer: ViewStyle = {
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    padding: 60,
+    padding: 50,
     backgroundColor: Colors.dark.background
 }
