@@ -10,5 +10,10 @@ export const style = StyleSheet.create({
   data_text: DataText,
   img: DataImage,
   logo_container: LogoContainer,
-  logo_image: LogoImage
+  logo_image: LogoImage,
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
