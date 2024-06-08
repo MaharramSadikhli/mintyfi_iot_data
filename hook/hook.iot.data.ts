@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./hook.iot.data.interface";
+import "./iot.data.interface";
 
 const IotData = () => {
   const [temperatureData, setTemperatureData] = useState<Temperature[]>([]);
